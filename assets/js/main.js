@@ -2,6 +2,11 @@
 (function () {
   "use strict";
 
+  // Tell the inline watchdog (in each page) that this script ran and is
+  // managing animation visibility — it only forces content visible if
+  // this file never executes at all.
+  window.__ulAnimOk = true;
+
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var hasGsap = typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined";
   if (hasGsap) gsap.registerPlugin(ScrollTrigger);
@@ -74,11 +79,35 @@
   // ---------- Order form -> Messenger handoff (no backend) ----------
   var form = document.getElementById("orderForm");
   if (form) {
+    var nameEl = document.getElementById("fName");
+    var productEl = document.getElementById("fProduct");
+    var noteEl = document.getElementById("fNote");
+    var errBox = document.getElementById("formError");
+    [nameEl, productEl].forEach(function (el) {
+      if (!el) return;
+      el.addEventListener("input", function () { el.classList.remove("field-error"); });
+      el.addEventListener("change", function () { el.classList.remove("field-error"); });
+    });
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var name = document.getElementById("fName").value.trim();
-      var product = document.getElementById("fProduct").value;
-      var note = document.getElementById("fNote").value.trim();
+      var name = nameEl.value.trim();
+      var product = productEl.value;
+      var note = noteEl.value.trim();
+
+      // Required-field feedback: highlight + message instead of failing silently
+      var missing = [];
+      if (!name) { nameEl.classList.add("field-error"); missing.push("your name"); }
+      if (!product) { productEl.classList.add("field-error"); missing.push("a product"); }
+      if (missing.length) {
+        if (errBox) {
+          errBox.textContent = "Please add " + missing.join(" and ") + " so we can take your order.";
+          errBox.classList.remove("hidden");
+        }
+        (!name ? nameEl : productEl).focus();
+        return;
+      }
+      if (errBox) errBox.classList.add("hidden");
+
       var lines = [
         "Hello Urban Leather! I would like to order:",
         "Product: " + product,
@@ -114,6 +143,8 @@
     return;
   }
 
+  // ---------- GSAP animation setup (guarded: any failure shows content) ----------
+  try {
   // ---------- Hero entrance: masked headline lines, then the rest ----------
   var heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
   var lineInners = gsap.utils.toArray(".line-inner");
@@ -259,12 +290,12 @@
 
   // ---------- Craft / cover images: gentle parallax ----------
   gsap.utils.toArray(".parallax-img").forEach(function (img) {
-    gsap.set(img, { scale: 1.14 });
+    gsap.set(img, { scale: 1.1 });
     gsap.fromTo(
       img,
-      { yPercent: -5 },
+      { yPercent: -4 },
       {
-        yPercent: 5,
+        yPercent: 4,
         ease: "none",
         scrollTrigger: {
           trigger: img.closest("section") || img,
@@ -299,4 +330,14 @@
   window.addEventListener("load", function () {
     ScrollTrigger.refresh();
   });
+  } catch (err) {
+    // Animation setup failed midway — never leave content hidden.
+    document.querySelectorAll("[data-hero], [data-reveal]").forEach(function (el) {
+      el.style.opacity = "1";
+      el.style.transform = "none";
+    });
+    document.querySelectorAll(".line-inner").forEach(function (el) {
+      el.style.transform = "none";
+    });
+  }
 })();
