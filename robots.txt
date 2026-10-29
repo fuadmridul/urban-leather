@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fuadmridul.github.io/urban-leather/sitemap.xml

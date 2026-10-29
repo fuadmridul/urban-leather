@@ -10,6 +10,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="assets/css/style.css" />
+<meta name="theme-color" content="#1a0f08" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Urban Leather — Premium Genuine Leather Goods" />
+<meta property="og:description" content="Urban Leather — premium genuine leather goods: moneybag wallets, bags, diaries, belts & card holders. Order through our Facebook Page and Messenger." />
+<meta property="og:image" content="https://fuadmridul.github.io/urban-leather/assets/img/cover.jpg" />
+<link rel="apple-touch-icon" href="assets/img/monogram.png" />
 <script>document.documentElement.classList.add('js-anim');</script>
 </head>
 <body class="leather-bg antialiased">
@@ -21,12 +27,12 @@
 
 <!-- ================= HEADER ================= -->
 <header id="siteHeader" class="site-header fixed top-0 left-0 right-0 z-50">
-  <div class="header-inner max-w-7xl mx-auto px-5 sm:px-8 h-[76px] flex items-center justify-between gap-4">
-    <a href="index.html" class="flex items-center gap-3 shrink-0">
-      <img src="assets/img/monogram.png" alt="Urban Leather monogram logo" class="w-11 h-11 rounded-full object-cover ring-2 ring-[#c9a86a]/70" />
+  <div class="header-inner max-w-7xl mx-auto px-4 min-[400px]:px-5 sm:px-8 h-[76px] flex items-center justify-between gap-3 sm:gap-4">
+    <a href="index.html" class="flex items-center gap-2.5 min-[400px]:gap-3 shrink-0">
+      <img src="assets/img/monogram.png" alt="Urban Leather monogram logo" class="w-9 h-9 min-[400px]:w-11 min-[400px]:h-11 rounded-full object-cover ring-2 ring-[#c9a86a]/70" />
       <span class="leading-none">
-        <span class="display block text-lg sm:text-xl font-bold tracking-[0.18em] text-[#f3e7d3]">URBAN LEATHER</span>
-        <span class="block text-[10px] tracking-[0.34em] text-[#c9a86a] mt-1">PREMIUM LEATHER GOODS</span>
+        <span class="display block text-[15px] min-[400px]:text-lg sm:text-xl font-bold tracking-[0.13em] sm:tracking-[0.18em] text-[#f3e7d3]">URBAN LEATHER</span>
+        <span class="block text-[9px] min-[400px]:text-[10px] tracking-[0.24em] sm:tracking-[0.34em] text-[#c9a86a] mt-1">PREMIUM LEATHER GOODS</span>
       </span>
     </a>
     <nav class="hidden lg:flex items-center gap-9 text-[13px] font-semibold text-[#f3e7d3]/85" aria-label="Main navigation">
@@ -36,7 +42,7 @@
       <a class="nav-link" href="contact.html">CONTACT</a>
     </nav>
     <div class="flex items-center gap-3">
-      <a href="https://m.me/61568058020640" target="_blank" rel="noopener" class="btn-gold hidden sm:inline-flex !py-2.5 !px-5 text-sm">Inbox to Order</a>
+      <a href="https://m.me/61568058020640" target="_blank" rel="noopener" class="btn-gold btn-header-cta !py-2.5 !px-5 text-sm">Inbox to Order</a>
       <button id="menuBtn" class="lg:hidden w-11 h-11 grid place-items-center rounded-full border border-[#c9a86a]/40 text-[#f3e7d3]" aria-label="Open menu" aria-expanded="false">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
@@ -54,12 +60,12 @@
 
 <!-- ================= HERO ================= -->
 <section id="home" class="relative min-h-[100svh] flex items-center justify-center overflow-hidden">
-  <img id="heroBg" src="assets/img/hero-scene.jpg" alt="Leather handbag, diary, wallet, belt and card holder arranged on dark brown leather" class="hero-bg absolute inset-0 w-full h-[115%] object-cover object-center" />
+  <img id="heroBg" fetchpriority="high" decoding="async" src="assets/img/hero-scene.jpg" alt="Leather handbag, diary, wallet, belt and card holder arranged on dark brown leather" class="hero-bg absolute inset-0 w-full h-[115%] object-cover object-center" />
   <div class="hero-vignette absolute inset-0"></div>
   <div class="relative z-10 text-center px-5 pt-32 pb-24 max-w-4xl mx-auto">
     <img data-hero src="assets/img/monogram.png" alt="Urban Leather UR monogram embossed on brown leather" class="float-badge w-32 h-32 sm:w-40 sm:h-40 mx-auto rounded-[1.6rem] object-cover shadow-2xl ring-1 ring-[#c9a86a]/60" />
     <p data-hero class="eyebrow mt-9">Premium • Genuine • Leather</p>
-    <h1 class="display font-extrabold text-[#f3e7d3] mt-4 text-[13.5vw] sm:text-7xl lg:text-[6.2rem] tracking-wide">
+    <h1 class="display font-extrabold text-[#f3e7d3] mt-4 text-[clamp(2.6rem,13.5vw,4.5rem)] sm:text-7xl lg:text-[6.2rem] tracking-[0.02em] sm:tracking-wide">
       <span class="line-mask"><span class="line-inner">URBAN</span></span>
       <span class="line-mask"><span class="line-inner">LEATHER</span></span>
     </h1>
@@ -97,11 +103,11 @@
 </section>
 
 <!-- ================= FEATURED PRODUCTS ================= -->
-<section id="featured" class="relative py-24 sm:py-28">
+<section id="featured" class="relative py-16 sm:py-28">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
     <div class="section-head text-center max-w-2xl mx-auto">
       <p class="eyebrow">Featured Collection</p>
-      <h2 class="display text-4xl sm:text-5xl font-bold mt-4">Featured Pieces</h2>
+      <h2 class="display text-[clamp(1.8rem,8.6vw,2.25rem)] sm:text-5xl font-bold mt-4">Featured Pieces</h2>
       <div class="gold-rule mt-6"><span class="diamond"></span></div>
       <p class="mt-5 text-[#f3e7d3]/75">Four of our most-loved pieces — the full range of seven essentials waits in the shop.</p>
     </div>
@@ -109,7 +115,7 @@
     <div class="card-grid mt-14 grid sm:grid-cols-2 xl:grid-cols-4 gap-6">
       <!-- Leather Bag -->
       <article class="product-card" data-reveal>
-        <div class="overflow-hidden h-56"><img class="card-img w-full h-full object-cover" src="assets/img/product-bag.jpg" alt="Elegant brown leather handbag with stitched handles" loading="lazy" /></div>
+        <div class="overflow-hidden h-56"><img class="card-img w-full h-full object-cover" src="assets/img/product-bag.jpg" alt="Elegant brown leather handbag with stitched handles" loading="lazy" decoding="async" /></div>
         <div class="p-6">
           <h3 class="display text-2xl font-bold">Leather Bag</h3>
           <p class="mt-2 text-sm leading-relaxed text-[#f3e7d3]/75">Structured leather bags with stitched handles — quiet luxury that goes with everything.</p>
@@ -119,7 +125,7 @@
       </article>
       <!-- Moneybag -->
       <article class="product-card" data-reveal>
-        <div class="overflow-hidden h-56"><img class="card-img w-full h-full object-cover" src="assets/img/product-moneybag.jpg" alt="Cognac brown leather bifold moneybag wallet standing on dark leather" loading="lazy" /></div>
+        <div class="overflow-hidden h-56"><img class="card-img w-full h-full object-cover" src="assets/img/product-moneybag.jpg" alt="Cognac brown leather bifold moneybag wallet standing on dark leather" loading="lazy" decoding="async" /></div>
         <div class="p-6">
           <h3 class="display text-2xl font-bold">Moneybag</h3>
           <p class="mt-2 text-sm leading-relaxed text-[#f3e7d3]/75">Slim bifold wallets in rich cognac leather — cash, cards and character in your pocket.</p>
@@ -129,7 +135,7 @@
       </article>
       <!-- Leather Shoes -->
       <article class="product-card" data-reveal>
-        <div class="overflow-hidden h-56"><img class="card-img w-full h-full object-cover" src="assets/img/product-shoes.jpg" alt="Pair of polished brown leather formal shoes" loading="lazy" /></div>
+        <div class="overflow-hidden h-56"><img class="card-img w-full h-full object-cover" src="assets/img/product-shoes.jpg" alt="Pair of polished brown leather formal shoes" loading="lazy" decoding="async" /></div>
         <div class="p-6">
           <h3 class="display text-2xl font-bold">Leather Shoes</h3>
           <p class="mt-2 text-sm leading-relaxed text-[#f3e7d3]/75">Polished leather formals with stitched soles — sharp at the office, strong for years.</p>
@@ -139,7 +145,7 @@
       </article>
       <!-- Diary -->
       <article class="product-card" data-reveal>
-        <div class="overflow-hidden h-56"><img class="card-img w-full h-full object-cover" src="assets/img/product-diary.jpg" alt="Hand-stitched brown leather diary on a dark leather surface" loading="lazy" /></div>
+        <div class="overflow-hidden h-56"><img class="card-img w-full h-full object-cover" src="assets/img/product-diary.jpg" alt="Hand-stitched brown leather diary on a dark leather surface" loading="lazy" decoding="async" /></div>
         <div class="p-6">
           <h3 class="display text-2xl font-bold">Diary</h3>
           <p class="mt-2 text-sm leading-relaxed text-[#f3e7d3]/75">Hand-bound leather diaries with stitched spines — for plans, notes and ideas worth keeping.</p>
@@ -156,16 +162,16 @@
 </section>
 
 <!-- ================= CRAFT TEASER ================= -->
-<section class="relative py-24 sm:py-28 bg-[#180d05]/60 border-y border-[#c9a86a]/15 overflow-hidden">
+<section class="relative py-16 sm:py-28 bg-[#180d05]/60 border-y border-[#c9a86a]/15 overflow-hidden">
   <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
     <div data-reveal class="relative max-w-md mx-auto w-full">
       <div class="stitch-frame rounded-[1.8rem] overflow-hidden shadow-2xl">
-        <img src="assets/img/logo-original.jpg" alt="Urban Leather original patch logo — embossed UR shield on a stitched leather patch" class="parallax-img w-full h-auto block" loading="lazy" />
+        <img src="assets/img/logo-original.jpg" width="896" height="905" alt="Urban Leather original patch logo — embossed UR shield on a stitched leather patch" class="parallax-img w-full h-auto block" loading="lazy" decoding="async" />
       </div>
     </div>
     <div data-reveal>
       <p class="eyebrow">The Craft</p>
-      <h2 class="display text-4xl sm:text-5xl font-bold mt-4 leading-tight">Leather, the Way<br />It Should Feel</h2>
+      <h2 class="display text-[clamp(1.8rem,8.6vw,2.25rem)] sm:text-5xl font-bold mt-4 leading-tight">Leather, the Way<br />It Should Feel</h2>
       <p class="mt-6 text-[#f3e7d3]/80 leading-relaxed">Real leather has a grain you can feel and a scent you cannot fake. Every Urban Leather piece starts from that honest material — cut, edged and stitched so the seams hold as long as the hide itself.</p>
       <a href="about.html" class="btn-outline mt-8">Our Story</a>
     </div>
@@ -173,11 +179,11 @@
 </section>
 
 <!-- ================= WHY US ================= -->
-<section class="py-24 sm:py-28">
+<section class="py-16 sm:py-28">
   <div class="max-w-7xl mx-auto px-5 sm:px-8">
     <div class="section-head text-center max-w-2xl mx-auto">
       <p class="eyebrow">Why Urban Leather</p>
-      <h2 class="display text-4xl sm:text-5xl font-bold mt-4">Simple Promises,<br />Kept in Leather</h2>
+      <h2 class="display text-[clamp(1.8rem,8.6vw,2.25rem)] sm:text-5xl font-bold mt-4">Simple Promises,<br />Kept in Leather</h2>
       <div class="gold-rule mt-6"><span class="diamond"></span></div>
     </div>
     <div class="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -206,11 +212,11 @@
 </section>
 
 <!-- ================= CTA BANNER ================= -->
-<section class="pb-24 sm:pb-28">
+<section class="pb-16 sm:pb-28">
   <div class="max-w-5xl mx-auto px-5 sm:px-8">
     <div class="leather-panel stitch-frame rounded-[1.8rem] px-7 py-14 sm:p-16 text-center relative" data-reveal>
       <p class="eyebrow">Urban Leather</p>
-      <h2 class="display text-4xl sm:text-5xl font-bold mt-4">Carry Something That Lasts</h2>
+      <h2 class="display text-[clamp(1.8rem,8.6vw,2.25rem)] sm:text-5xl font-bold mt-4">Carry Something That Lasts</h2>
       <p class="mt-5 text-[#f3e7d3]/75 max-w-xl mx-auto">Browse the full collection, or talk to us directly — every order is confirmed personally in chat.</p>
       <div class="mt-9 flex flex-wrap justify-center gap-4">
         <a href="shop.html" class="btn-gold">Shop the Collection</a>
@@ -223,8 +229,8 @@
 <!-- ================= FOOTER ================= -->
 <footer class="pt-20 pb-10 border-t border-[#c9a86a]/15">
   <div class="max-w-7xl mx-auto px-5 sm:px-8 text-center">
-    <img data-reveal src="assets/img/monogram.png" alt="Urban Leather monogram" class="w-20 h-20 mx-auto rounded-3xl object-cover ring-1 ring-[#c9a86a]/50" loading="lazy" />
-    <p data-reveal class="display text-3xl font-bold tracking-[0.14em] mt-6">URBAN LEATHER</p>
+    <img data-reveal src="assets/img/monogram.png" alt="Urban Leather monogram" class="w-20 h-20 mx-auto rounded-3xl object-cover ring-1 ring-[#c9a86a]/50" loading="lazy" decoding="async" />
+    <p data-reveal class="display text-[clamp(1.4rem,7.2vw,1.875rem)] font-bold tracking-[0.1em] sm:tracking-[0.14em] mt-6">URBAN LEATHER</p>
     <p data-reveal class="text-[#f3e7d3]/70 mt-3 max-w-md mx-auto text-sm leading-relaxed">Premium genuine leather goods. The fastest way to reach us is our Facebook Page — follow us there for new pieces, and inbox any time to order.</p>
     <p data-reveal class="display italic text-[#c9a86a] mt-4 text-lg">“Quality that defines your identity”</p>
     <div data-reveal class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto text-left">
@@ -232,7 +238,7 @@
         <span class="block text-xs tracking-[0.2em] text-[#c9a86a]">CALL US</span>
         <span class="block mt-1.5 font-semibold text-[#f3e7d3]">+880 1339-923934</span>
       </a>
-      <a href="https://wa.me/8801339923934" target="_blank" rel="noopener" class="block rounded-2xl ring-1 ring-[#c9a86a]/30 px-5 py-4 hover:ring-[#c9a86a]/70 transition">
+      <a href="https://wa.me/8801339923934?text=Hello%20Urban%20Leather!%20I%20have%20an%20enquiry." target="_blank" rel="noopener" class="block rounded-2xl ring-1 ring-[#c9a86a]/30 px-5 py-4 hover:ring-[#c9a86a]/70 transition">
         <span class="block text-xs tracking-[0.2em] text-[#c9a86a]">WHATSAPP</span>
         <span class="block mt-1.5 font-semibold text-[#f3e7d3]">+880 1339-923934</span>
       </a>
@@ -240,10 +246,10 @@
         <span class="block text-xs tracking-[0.2em] text-[#c9a86a]">EMAIL</span>
         <span class="block mt-1.5 font-semibold text-[#f3e7d3] break-all">skurbanleather@gmail.com</span>
       </a>
-      <div class="rounded-2xl ring-1 ring-[#c9a86a]/30 px-5 py-4">
+      <a href="https://www.google.com/maps/search/?api=1&query=22%2F27%20Karimnagar%20Sonadanga%20Khulna%209000" target="_blank" rel="noopener" class="block rounded-2xl ring-1 ring-[#c9a86a]/30 px-5 py-4 hover:ring-[#c9a86a]/70 transition">
         <span class="block text-xs tracking-[0.2em] text-[#c9a86a]">VISIT US • ALWAYS OPEN</span>
         <span class="block mt-1.5 font-semibold text-[#f3e7d3]">22/27, Karimnagar, Sonadanga, Khulna 9000</span>
-      </div>
+      </a>
     </div>
     <div data-reveal class="mt-8 flex flex-wrap justify-center gap-4">
       <a href="https://www.facebook.com/profile.php?id=61568058020640" target="_blank" rel="noopener" class="btn-outline">
@@ -262,12 +268,12 @@
       <a class="nav-link" href="contact.html">CONTACT</a>
     </nav>
     <hr class="stitch-line max-w-3xl mx-auto mt-10 opacity-70" />
-    <p class="mt-7 text-xs tracking-[0.18em] text-[#f3e7d3]/50">© 2026 URBAN LEATHER • PREMIUM GENUINE LEATHER GOODS</p>
+    <p class="mt-7 text-xs tracking-[0.18em] text-[#f3e7d3]/65">© 2026 URBAN LEATHER • PREMIUM GENUINE LEATHER GOODS</p>
   </div>
 </footer>
 
 <!-- Floating WhatsApp button -->
-<a href="https://wa.me/8801339923934" target="_blank" rel="noopener" aria-label="Chat with Urban Leather on WhatsApp" class="fixed bottom-24 right-5 z-50 w-14 h-14 rounded-full grid place-items-center text-white" style="background:linear-gradient(135deg,#1faa55,#128c4b);">
+<a href="https://wa.me/8801339923934?text=Hello%20Urban%20Leather!%20I%20have%20an%20enquiry." target="_blank" rel="noopener" aria-label="Chat with Urban Leather on WhatsApp" class="float-wa fixed bottom-24 right-5 z-50 w-14 h-14 rounded-full grid place-items-center text-white" style="background:linear-gradient(135deg,#1faa55,#128c4b);">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.9-4.45 9.9-9.91C21.94 6.45 17.5 2 12.04 2zm0 18.03a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.12.82.83-3.04-.19-.31a8.08 8.08 0 0 1-1.24-4.28c0-4.47 3.64-8.11 8.15-8.11 4.47 0 8.11 3.64 8.11 8.11 0 4.51-3.64 8.12-8.11 8.12zm4.45-6.08c-.24-.12-1.44-.71-1.66-.79-.22-.08-.39-.12-.55.13-.16.24-.63.79-.77.97-.14.18-.28.2-.53.08-.24-.12-1.03-.38-1.96-1.21-.72-.65-1.21-1.44-1.35-1.68-.14-.25-.02-.38.11-.51.11-.11.24-.28.37-.43.12-.14.16-.24.24-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.32-.77-1.84-.2-.48-.41-.42-.57-.43h-.49c-.17 0-.43.06-.67.31-.24.25-.92.9-.92 2.19 0 1.29.94 2.54 1.07 2.71.13.18 1.85 2.83 4.49 3.97.63.27 1.12.43 1.5.56.63.2 1.21.17 1.66.1.51-.08 1.56-.64 1.9-1.27.35-.63.35-1.17.24-1.28-.1-.11-.22-.18-.47-.3z"/></svg>
 </a>
 
@@ -284,5 +290,15 @@
 <script src="assets/js/vendor/gsap.min.js"></script>
 <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+window.setTimeout(function () {
+  if (!window.__ulAnimOk) {
+    document.querySelectorAll("[data-hero], [data-reveal]").forEach(function (el) { el.style.opacity = "1"; el.style.transform = "none"; });
+    document.querySelectorAll(".line-inner").forEach(function (el) { el.style.transform = "none"; });
+    var pt = document.getElementById("pageTransition");
+    if (pt) pt.style.display = "none";
+  }
+}, 1600);
+</script>
 </body>
 </html>
